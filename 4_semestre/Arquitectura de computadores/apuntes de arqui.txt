@@ -1,0 +1,3 @@
+convercion a int en c# 
+:
+convert+toin+16(argumento).to string() -----> el argumentos uele ser un atributo, el atributo text
