@@ -1,0 +1,4 @@
+C:\Users\Stak\AppData\Local\Temporary Projects\ledArduino\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Stak\AppData\Local\Temporary Projects\ledArduino\obj\x86\Debug\ledArduino.Form1.resources
+C:\Users\Stak\AppData\Local\Temporary Projects\ledArduino\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Stak\AppData\Local\Temporary Projects\ledArduino\obj\x86\Debug\GenerateResource.write.1.tlog
