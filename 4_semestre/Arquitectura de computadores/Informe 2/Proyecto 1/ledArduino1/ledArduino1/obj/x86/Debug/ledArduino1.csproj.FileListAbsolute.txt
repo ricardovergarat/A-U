@@ -1,0 +1,53 @@
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Form1.resources
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\bin\Debug\ledArduino1.exe
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\bin\Debug\ledArduino1.pdb
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Properties.Resources.resources
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.exe
+C:\Users\Stak\Desktop\arduino c#\Led\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.pdb
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.exe
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.pdb
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\bin\Debug\ledArduino1.exe
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\bin\Debug\ledArduino1.pdb
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Form1.resources
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Properties.Resources.resources
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\arduino\Gaston Salgado Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.exe
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.pdb
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\bin\Debug\ledArduino1.exe
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\bin\Debug\ledArduino1.pdb
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Form1.resources
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Properties.Resources.resources
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.exe
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.pdb
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\bin\Debug\ledArduino1.exe
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\bin\Debug\ledArduino1.pdb
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.csprojResolveAssemblyReference.cache
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Form1.resources
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Properties.Resources.resources
+D:\Google Drive\Arduino FTR\arduino\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.csproj.GenerateResource.Cache
+C:\Users\Fernando\Desktop\Proyecto CC\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.exe
+C:\Users\Fernando\Desktop\Proyecto CC\Control puerto Arduino visual basic requiere c#\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.pdb
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\bin\Debug\ledArduino1.exe
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\bin\Debug\ledArduino1.pdb
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.csprojAssemblyReference.cache
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Form1.resources
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Properties.Resources.resources
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.csproj.GenerateResource.cache
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.exe
+C:\Users\Intel\Desktop\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.pdb
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\bin\Debug\ledArduino1.exe
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\bin\Debug\ledArduino1.pdb
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.csprojAssemblyReference.cache
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Form1.resources
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino.Properties.Resources.resources
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.csproj.GenerateResource.cache
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.exe
+C:\Users\Intel\Desktop\Arqui-nota-1\Puente h\ledArduino1\ledArduino1\obj\x86\Debug\ledArduino1.pdb
