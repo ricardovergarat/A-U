@@ -1,0 +1,241 @@
+% !TeX spellcheck = es_ES
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[left=2cm, right=2cm, top=1.50cm, bottom=1.50cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{theorem}
+\usepackage{subfig}
+\usepackage{epstopdf}
+\usepackage[hyphens]{url}
+\newcommand{\Hi}{$\mathcal{H}_{\infty}$}
+\usepackage{url}
+\theorembodyfont{ \normalfont }
+\newtheorem{theorem}{\it Theorem}
+\usepackage{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{times}
+\usepackage[portuges, english, brazil]{babel}
+%\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[hyphens]{url}
+\usepackage{epsfig}
+\usepackage{psfrag}
+\usepackage{fancybox}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{balance}
+\usepackage{times}
+%\usepackage{++ure}
+\usepackage{theorem}
+\usepackage{pifont}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{colortbl}
+\usepackage{cite}
+\usepackage{icomma}
+\usepackage{bbold}
+\usepackage{dsfont}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{mathptmx}
+
+%\usepackage{algorithm}
+%\usepackage[noend]{algpseudocode}
+\usepackage{subfig}
+\usepackage{epstopdf}
+
+\newcommand{\I}{\mbox{I}}
+\newcommand{\Hd}{$\mathcal{H}_{2}$}
+%\newcommand{\Hi}{$\mathcal{H}_{\infty}$}
+\newcommand{\Tr}{\mbox{ Tr}~}
+\newcommand{\G}{$\mathcal{G}$}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\Z}{\mathcal{Z}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Sf}{\mathcal{S}}
+\newcommand{\Kb}{\mathds{K}}
+
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\C}{\mathcal{C}}
+
+\newcommand{\Kset}{\mathcal{K}}
+\newcommand{\Pset}{\mathcal{P}}
+\newcommand{\Rset}{\mathcal{R}}
+\newcommand{\KKset}{\Gamma}
+\newcommand{\Uset}{\mathcal{U}}
+\newcommand{\UUset}{\Lambda}
+\def\real{\mathds{R}}
+\def\nat{\mathds{N}}
+\def\sym{\mathds{S}}
+\def\integer{\mathds{Z}_{+}}
+\def\ds{\displaystyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\begin{document}
+%\begin{flushleft}
+%Examen del aula \textit{Control De Procesos Industriales},
+%segundo  2018. Lunes 17 de diciembre 8:15pm a 10:15pm.  %\href{https://www.researchgate.net/profile/Jonathan_Palma2}{[Research Gate]}.
+%\end{flushleft}
+\vspace{6 mm}
+
+
+\begin{center}
+\textbf{{\LARGE   Arquitectura de Computadores\\ 
+		\vspace{2 mm}	
+			  {\em Costo Comunicacional}} } 
+\end{center}
+\vspace{3 mm}		
+\textbf{Profesor: Jonathan M. Palma}~\\ %~(Profesor)}
+
+
+	
+	
+\section{Resumen del Modulo}
+En el diseño de soluciones computacionales existen dos formas de afrontar los problemas que comprenden realizar cálculos en gran volumen.    El primero {por hardware} permite realizar cálculos complejos con gran eficiencia  pero las intrusiones utilizadas requieren  hardware dedicado. 
+Por contra parte, las soluciones {\em por software} utilizan un set resumido de instrucciones las cuales  combinan, permitiendo realizar cálculos mas complejos. 
+ El presente modulo tiene por objetivo exponer las ventas y complicaciones de cada estrategia para   abordar la resolución de cálculos complejos en procesadores de aritmética limitada y computadores convenciones de escritorio. 
+  
+
+\section{Evaluación}
+
+
+Contenidos del Informe 
+
+\textbf{Sección 1 ::  Introducción.}
+
+3 párrafos
+
+- Párrafo de texto uno, Marco teórico general "Que es el costo computacional y por que es importe para informática".
+
+- Párrafo de texto dos,  Conceptualización del problema particular a tratar.
+
+- Párrafo de texto tres, Explicar  caso de estudio. 
+
+ $>>>$ {\em Realizar un texto coherente  entre secciones partiendo  de ideas generales hasta llegar a caso de estudio particular.}
+
+
+\textbf{Sección 2 :: Problema.}
+
+Mínimo 3 párrafos
+
+Párrafo 1
+
+- Definir el problema general conceptualización en detalle "calcular esfuerzo computacional al  resolver LMIs cuantificado en n\'umero de variables escalares y lineas de LMIs".
+
+{\em Recordar} Problema a tratar es 
+
+$$P>0 ~~ P \in \mathbb{R}^{n_x \times n_x}$$
+
+$$ A(\theta(k))'P + P A(\theta(k))<0  \forall   \theta(k) $$
+
+Párrafo 2
+
+- Desarrollar una metodología para crear los vértices de  $A(\theta(k)) \in \mathbb{R}^{n_x \times n_x}$ para un $n_x$ arbitrario.
+
+Párrafo 3
+
+- Describir los recursos computaciones utilizados en el trabajo. 
+
+\textbf{Sección 3 :: Resultados.}
+
+Dado la estructura descrita en la sección anterior para   $A(\theta(k))$ graficar  el n\'umero variables escalares y lineas de LMIs en función del orden de $A(\theta(k))$ ($n_x$).
+
+Crear una base de datos con 100 sistemas estables para $n_x=3,4,...10$ y mostrar  el tiempo medio de resolución y desvió estándar obtenido para  cada grado $n_x$.
+
+{\em Opcional (Puntos Extras): A) utilizar mas de un computador para estudiar como varia el tiempo de resolución de las LMIs en función del hardware utilizado. B) comparar con la base de datos de compañeros.}
+
+
+\textbf{Sección 4 :: Conclusión}
+
+2 párrafos;
+
+Primero. Conclusión General
+
+Segundo. Alguno de estos tópicos; trabajo futuros, problemas no abordados, comentarios relevantes etc. 
+
+
+\textbf{Observaciones}
+
+-Trabajo debe tener mínimo 3 paginas y un máximo 4 paginas en formato IEEE doble columna.
+
+ \url{https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/ieee-article-templates/}.
+
+-6 referencias mínimo que sean parte del texto.
+
+
+%
+%
+%
+%
+%
+%
+%\color{blue}
+%Días de Aula.
+%\begin{itemize}
+%\item \textbf{Viernes 18 de Octubre en Bloque 6-7 y 8-9:} Introducción,  presentación de materiales y  evaluación, conceptos de optimizacion, Primera parte del Tutorial de LMI {\em linear matrix inequality}.
+%\item \textbf{Miércoles  23 de Octubre en Bloque 1-2 y 3-4:} Programación en Matlab y conceptos de optimizacion en espacios vectoriales y costo computacional asociado, Segunda parte  del Tutorial de LMI {\em linear matrix inequality}. 
+%\item \textbf{Viernes 25 de Octubre en Bloque 6-7 y 8-9:} Prueba pendiente Profesor Frenando.
+%\item \textbf{Miercoles 30 de Octubre en Bloque  1-2 y 3-4:} Trabajo individual, envió informe preliminar.
+%\item \textbf{Miércoles 06 de noviembre  Bloque 1-2 y 3-4:}  Finalización
+% del modulo. 
+%\end{itemize}
+%
+
+\subsection{Evaluación}
+
+\begin{itemize}
+	\item \textbf{Preliminar:} Opcional fecha de envió 5 Enero. 
+	\item \textbf{Informe:} 10 de Enero. 
+\end{itemize}
+
+Basado en el Tutorial de LMI, trabajo individuales. 
+
+%
+%\subsection{Descripción de Actividades}	
+%\subsection{Aula 1}
+%Tópicos a tratar 
+%\begin{itemize}
+%	\item Soluciones por  {\em por software} y {por hardware}.
+%	\item Instrucciones básicas en procesadores, problema de invertir matriz (Unidad de coma flotante vs Unidad aritmético lógica).  
+%	\item Ejemplo GPU vs CPU. 
+%	\item Desafíos en Inteligencia artificial y optimizan. 
+%	\item Tarea evaluar el tiempo asociado a invertir una matriz en Arduino o Matlab. 
+%\end{itemize}
+%\subsection{Aula 2}
+%\subsection{Aula 3}
+%\subsection{Aula 4}
+%\subsection{Aula 5}
+
+\section{Referencias y Material Complementario}	
+
+GPU  \url{https://hipertextual.com/archivo/2013/12/hardware-gpu-grafica/}\\
+Unidad de coma flotante  \url{https://es.wikipedia.org/wiki/Unidad_de_coma_flotante}\\
+Suma complemento a 2 \url{https://www.youtube.com/watch?v=4bO7Cx8qKfI}\\
+Complemento a 2  \url{https://www.youtube.com/watch?v=umCFglE_eFU}\\
+
+%\bibliographystyle{alpha}
+%\bibliography{listaabreviada,JMPref_20181107_ql,estgeral,hinf,filtering,hoofilt,robust,fldp,saida,switched,estquad,markov,sdp,fuzzy,fragile,satcon,estab,ltv,polinomial,scheduling,bmi,ncs,mpc,delay,sispot}
+
+\end{document}
