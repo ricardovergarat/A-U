@@ -1,0 +1,8 @@
+1- los archivos.txt deben enstar en el msimo directo que el codigo escrito en matlab, estos archivos solo sera usados para tener un respaldo de las matrices estables
+2- Si no desea hacer el paso anterior puede borrar desde la linea 107 hasta la 125
+3- poner la base de datos en el mismo directorio para evitar problemas al cargar los datos
+4- los unicos cambios que deben hacerse en codigo son la linea 4 y 6
+	linea 4 ------> es el orden de la matrices que quiera generar
+	linea 6 ------> la cantidad de matrices que quiere poner en la base de datos
+5- el programa genera la cantida de matrices que se indiquen de solo un orden, es decir el orden no crecera sera estatico durante todo el programa
+6- El codigo fue esxrito en matlab 2017 por si existe algun error en otras versiones

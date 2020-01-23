@@ -47,7 +47,7 @@ sol = solvesdp(LMIs, [], sdpsettings('solver', 'sedumi', 'verbose', 0));
 
 output.cpusec = sol.solvertime;
 
-output.p = min(checkset(LMIs))
+output.p = min(checkset(LMIs)) % esto es lo bueno  si es positvo es estable
 
 output.cpusec = sol.solvertime;
 
@@ -63,6 +63,7 @@ output.feas = 0;
 
 W=double(P11)
 
+disp("no debe llegar aqui");
 
 %%%%%%%%%%%%
 
