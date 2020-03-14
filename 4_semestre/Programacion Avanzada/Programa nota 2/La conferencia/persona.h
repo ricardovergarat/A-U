@@ -13,7 +13,7 @@ class persona{
 	public:
 		persona(string,string,string);
 		void mostrar_persona();
-		string get_nombre();
+		string get_nombre(); // Para encontrar si una "persona" pertenece a una conferencia o articulo
 	
 };
 

@@ -3,7 +3,6 @@
 
 # include "articulo.h"
 
-
 using namespace std;
 
 articulo::articulo(string _titulo, string _resumen, string _cuerpo, vector <string> _comentarios,vector <int> _notas, string _aprobado){
@@ -52,24 +51,11 @@ void articulo::mostrar_autor_principal(){
 	cout << los_autores[0].get_nombre() << endl;
 }
 
-void articulo::actualizar_comentario(string comentario, int indice){
-	comentarios[indice] = comentario;
-}
-
-
-void articulo::actualizar_nota(int nota,int indice){
-	notas[indice] = nota;
-}
-
-
-void articulo::actualizar_aprobado(string respuesta){
-	aprobado = respuesta;
-}
-
-string articulo::get_titulo(){
-	return titulo;
-}
-
 void articulo::version_final(string cuerpo_final){
 	cuerpo = cuerpo_final;
 }
+
+string articulo::get_titulo() {
+	return titulo;
+}
+

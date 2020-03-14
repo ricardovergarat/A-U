@@ -11,8 +11,8 @@ using namespace std;
 class revisor : public persona{
 	public:
 		revisor(string,string,string);
-		string comentar();
-		int evaluar();
+		void comentar(articulo,int);
+		void evaluar(articulo,int);
 };
 
 # endif

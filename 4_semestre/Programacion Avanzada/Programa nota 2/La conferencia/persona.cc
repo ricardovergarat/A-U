@@ -11,6 +11,7 @@ persona::persona(string _nombre, string _afiliacion, string _correo){
 }
 
 void persona::mostrar_persona(){
+	cout << "" << endl;
 	cout << "Nombre: " << nombre << endl;
 	cout << "Afiliacion: " << afiliacion << endl;
 	cout << "Correo: " << correo << endl;

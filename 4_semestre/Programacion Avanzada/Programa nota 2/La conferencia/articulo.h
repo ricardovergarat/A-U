@@ -7,7 +7,6 @@
 
 using namespace std;
 // la fecha de entrega no fue incluida por que fue dificil recuperar la fecha desde el sistema operativo, se dificulto debido al hacerlo en multiples sistemas operativos
-// la mayoria de los encapsulamientos (publicos) en los atributos no son nesesariamente asi, pero se dejo asi para evitar problemas
 
 class articulo{
 	private:
@@ -15,10 +14,10 @@ class articulo{
 		string resumen;
 		string cuerpo;
 	public:
-		vector <string> comentarios;
-		vector <int> notas;
-		vector <autor> los_autores;
-		string aprobado;
+		vector <string> comentarios; // en publico para cuando comentemos
+		vector <int> notas; // en para cuando evaluemos
+		string aprobado;   // Este atributo tomas false o true y dice si se APROBO este articulo  // en publico porque queda mas corto el codigo simplemente
+		vector <autor> los_autores; // en public porque nesesitaremos aceder constantemnte a este atributo   // consideraremos SIEMPRE que el autor en indice 0 es el autor principal (cuando un autor crea un articulo es agregado instantaneamente como autor principal)  
 	public:
 		articulo(string,string,string,vector <string>,vector <int>,string);
 		void mostrar_articulo();
@@ -26,11 +25,8 @@ class articulo{
 		void agregar_grupo_autores(autor,autor,autor);
 		void mostrar_autores();
 		void mostrar_autor_principal();
-		void actualizar_comentario(string,int);
-		void actualizar_nota(int,int);
-		void actualizar_aprobado(string);
+		void version_final(string); // esto conviente el atributo cuerpo a el cuerpo completo, es decir el articulo final
 		string get_titulo();
-		void version_final(string);
 		
 };
 

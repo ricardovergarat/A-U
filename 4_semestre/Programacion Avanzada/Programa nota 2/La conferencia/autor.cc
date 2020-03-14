@@ -53,10 +53,10 @@ vector <string> autor::crear_articulo(){
 	string titulo,resumen,cuerpo,nombre_archivo;
 	cout << "Ingrese el nombre del articulo" << endl;
 	getline(cin,titulo);
-	cout << "Ingrese el resumen del articulo" << endl;
+	cout << "Ingrese el resumen del articulo" << endl; // esto tambien podia ser con archivos pero consideraremos que el resumen no tiene mas de 4 lineas en la consola
 	getline(cin,resumen);
 	bool existe = false;
-	while ( existe != true){
+	while ( existe != true){ // mientras no ingrese el nombre del archivo no saldra de este ciclo (esto es por si escribe mal el nombre, no esta en el mismo directorio, etc)
 		cout << "Ingrese el nombre del archivo 		ejemplo: 1.txt" << endl;
 		getline(cin,nombre_archivo);
 		existe = existe_archivo(nombre_archivo);
@@ -69,14 +69,8 @@ vector <string> autor::crear_articulo(){
 	return un_articulo;
 }
 
-void autor::notificar(string nombre_conferencia,string desicion){
-	if ( desicion == "RECHAZADO"){
-		string mensaje = "La conferencia " + nombre_conferencia + " a RECHAZADO su articulo";
-		notificaciones.push_back(mensaje);
-	}else{
-		string mensaje = "La conferencia " + nombre_conferencia + " a ACEPTADO su articulo";
-		notificaciones.push_back(mensaje);
-	}
+void autor::agregar_notificacion(string notificacion){
+	notificaciones.push_back(notificacion);
 }
 
 void autor::mostrar_notificaciones(){
@@ -85,9 +79,12 @@ void autor::mostrar_notificaciones(){
 		cout << notificaciones[x] << endl;
 		x = x + 1;
 	}
+	if (notificaciones.size() == 0) {
+		cout << "Usted no tiene ninguna notificacion" << endl;
+	}
 }
 
-string autor::convertir_a_final(){
+string autor::convertir_a_final(){ // mientras no ingrese el nombre del archivo no saldra de este ciclo (esto es por si escribe mal el nombre, no esta en el mismo directorio, etc)
 	string nombre_archivo,cuerpo;
 	bool existe = false;
 	while ( existe != true){
