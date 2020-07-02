@@ -1,9 +1,13 @@
 class grafo:
     vertices = []
     aristas = []
-    def __init__(self,_vertices,_aristas):
+    matriz_adyacente = []
+
+    def __init__(self,_vertices,_aristas,_largo = 0):
+        #G(V,A)
         self.vertices = _vertices
         self.aristas = _aristas
+        self.largo = _largo
 
     def mostrar_vertices(self):
         print(self.vertices)
@@ -21,12 +25,15 @@ class grafo:
                 else:
                     fila_n.append(0)
             matriz.append(fila_n)
-        for i in range(len(self.vertices)):
+        self.matriz_adyacente = matriz
+
+    def mostrar_matriz_adyacente(self):
+        for i in range(len(self.matriz_adyacente)):
             fila = ""
-            for j in range(len(self.vertices)):
-                fila = fila + str(matriz[i][j]) + " "
+            for j in range(len(self.matriz_adyacente[i])):
+                fila = fila + str(self.matriz_adyacente[i][j]) + " "
             print(fila)
-            #print(matriz[i])
+
 
 
 if __name__ == "__main__":
@@ -35,3 +42,4 @@ if __name__ == "__main__":
     G.mostrar_vertices()
     G.mostrar_aristas()
     G.obtner_matriz_adyacente()
+    G.mostrar_matriz_adyacente()
