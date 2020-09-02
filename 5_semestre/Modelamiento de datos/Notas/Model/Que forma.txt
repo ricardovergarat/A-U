@@ -1,0 +1,1 @@
+creo que llegamos a la 3 forma normal ya que no hay datos repetido ni atributos que dependan de la Pk
