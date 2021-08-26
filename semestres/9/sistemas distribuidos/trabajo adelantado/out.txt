@@ -1,0 +1,5 @@
+Resultados para 'hola' : primero.html segundo.html 
+Resultados para 'luficer' : No hay resultados
+Resultados para 'mundo' : primero.html 
+Resultados para 'ff' : No hay resultados
+Resultados para 'god' : No hay resultados

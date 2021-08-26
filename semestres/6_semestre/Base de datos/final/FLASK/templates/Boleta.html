@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Boleta </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+	<style type="text/css">
+		header{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+<header> <h1> BOLETA </h1> </header>
+
+<section>
+	<button type="submit" onclick="location='/'"> Volver al Inicio</button> <button type="submit" onclick="location='/Encuesta'">Ir a encuesta</button>
+
+<br><br><br>
+	<div class="tablecenter">
+		<table border="1">
+				<tr>
+					<th> Codigo Boleta </th>
+					<th> Codigo Seguimiento </th>
+					<th> Fecha De Pago </th>
+				</tr>
+
+				<tr>
+					<td> {{mostrar[0][0]}} </td> <!--CodBoleta-->
+					<td> {{mostrar[0][1]}} </td> <!--CodSeguimiento-->
+					<td> {{mostrar[0][2]}} </td> <!--Fecha de pago-->
+				</tr>
+
+				<tr>
+					<th> Repartidor </th>
+					<th> Estado </th>
+					<th> Tiempo de entrega (minutos)</th>
+				</tr>
+
+				<tr>
+					<td> {{repartidor[0][0]}} {{repartidor[0][1]}} </td> <!--Sr.Repartidor-->
+					<td> {{despacho[0][0]}} </td> <!--Estado-->
+					<td> {{despacho[0][1]}} </td> <!--Tiempo de Entrega-->
+				</tr>
+
+				<tr>
+					<th> Tipo de Pago </th>					
+					<th> Costo de Despacho </th>
+					<th> Total de Compra </th>
+				</tr>
+
+				<tr>
+					<td> {{mostrar[0][3]}} </td> <!--Tipo de Pago-->					
+					<td> {{despacho[0][2]}} </td> <!--Costo de Despacho-->
+					<td> {{mostrar[0][4]}} </td> <!--Total de Compra-->
+				</tr>
+		</table>	
+	</div>
+
+</section>
+	<br><br>
+<h3 style="text-align: center;"> Productos </h3>
+
+	<div class="tablecenter">
+		<table border="1">
+
+			<tr>
+				<th> Cod. Producto </th>
+				<th> Nombre</th>
+				<th> Precio</th>
+				
+			</tr>
+			{% for i in range(Cantidad[0]) %}
+			<tr>
+					<td> {{CodProducto[i][0]}} </td>
+					<td> {{NombreP[i][0]}} </td>
+					<td> {{Total[i][0]}} </td>
+			</tr>
+			{% endfor %}
+		</table>
+
+	</div>
+
+<br><br><br><br><br><br>
+</body>
+</html>

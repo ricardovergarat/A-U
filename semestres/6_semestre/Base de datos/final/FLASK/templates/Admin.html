@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Mantenimiento</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+	<style type="text/css">
+
+		header{
+			font-size: 24px
+			}
+	</style>
+</head>
+
+
+<body class="Admin">
+	<header>
+		<h1> ADMINISTRAR PAGINA </h1>
+	</header>
+	<br>
+
+	<br>
+	<div>
+
+		<table>
+			<tr>
+				<td>
+					<form action='/Admin' method="POST"> 
+						<input type="submit" name="Formulario" value=" Ingresar Categoria ">
+					</form>
+				</td>
+				<td>
+					<form action='/Admin' method= "POST">
+						<input type="submit" name="Formulario" value ="Actualizar Categoria">
+					</form>
+				</td>
+				<td>
+					<form action='/Admin' method="POST"> 
+						<input type="submit" name="Formulario" value=" Ingresar Producto ">
+					</form>
+				</td>
+				<td>
+					<form action='/Admin' method="POST"> 
+						<input type="submit" name="Formulario" value="Actualizar Producto">
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form action='/Admin' method="POST"> 
+						<input type="submit" name="Formulario" value=" Ingresar Repartidor ">
+					</form>
+				</td>
+				<td>
+					<form action='/Admin' method="POST">
+						<input type="submit" name="Formulario" value="Actualizar Repartidor">
+					</form>
+				</td>
+				<td>
+					<form action='/Admin' method = "POST">
+						<input type="submit" name="Formulario" value="Actualizar Cliente">
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<button type="submit" onclick="location='/'"> Volver al Inicio </button>
+	<button type="submit" onclick="location='/Admin'"> Limpiar Pantalla </button>
+
+
+	{%if mensaje != ""%}
+		<h2 class="mensaje">{{mensaje}}</h2>
+	{%endif%}
+	<div align="left">
+		<br>
+		<table border = "1" style="width: 30%">
+			<colgroup>
+				<col style="width: 50%"/>
+				<col style="width: 50%"/>
+			</colgroup>
+			<tr>
+				<th align ="left"> Codigo Categoria  </th>
+				{% for i in categorias%}	
+					<td align ="center"> {{i[0]}} </td>
+				{% endfor %}
+			</tr>
+			<tr>
+				<th align ="left"> Nombre Categoria </th>
+				{% for i in categorias%}
+					<td align ="left"> {{i[1]}} </td>
+				{% endfor %}
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div align="left">
+		{% if mensaje2 == "Ingresar Producto" %}
+		<h2>Ingresar un Producto</h2>
+		<table>
+		<tr>
+		<form action='/Admin' method="POST">
+			<td>
+			<label for= "Nombre_Producto"> Nombre Producto </label>				
+			</td>
+			<td>
+			<input type="text" name="Nombre_Producto">				
+			</td>
+			<td>
+			<label for= "Precio"> Precio Producto </label>				
+			</td>
+			<td>
+			<input type="text" name="Precio">				
+			</td>
+			<td>
+			<label for= "Codigo_Categoria"> Codigo Categoria </label>				
+			</td>
+			<td>
+			<input type="text" name="Codigo_Categoria">				
+			</td>
+			<td>
+			<label for= "Restringido"> Restringido </label>				
+			</td>
+			<td>
+			<input type="text" name="Restringido">				
+			</td>
+			<td>
+			<label for= "Stock"> Stock Producto </label>				
+			</td>
+			<td>
+			<input type="text" name="Stock">				
+			</td>
+			<td>
+			<input type="submit" name="Ingresar" value="Ingresar Producto">				
+			</td>
+		</form>			
+		</tr>			
+		</table>
+
+
+		{%endif%}
+	</div>			
+	<div align="left">
+		{% if mensaje2 == "Actualizar Producto" %}
+		<h2>Actualizar un Producto</h2>
+		<table>
+			<tr>
+			<form action='/Admin' method="POST">
+				<td>
+				<label for= "Nombre_Producto"> Nombre Producto </label>					
+				</td>
+				<td>
+				<input type="text" name="Nombre_Producto">					
+				</td>
+				<td>
+				<label for= "Codigo_Producto">Codigo Producto</label>					
+				</td>
+				<td>
+				<input type="text" name="Codigo_Producto">					
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Nombre">					
+				</td>
+			</form>
+			</tr>
+
+			<tr>
+			<form action='/Admin' method="POST">
+				<td>
+				<label for= "Precio"> Precio Producto </label>					
+				</td>
+				<td>
+				<input type="text" name="Precio">					
+				</td>
+				<td>
+				<label for= "Codigo_Producto">Codigo Producto</label>					
+				</td>
+				<td>
+				<input type="text" name="Codigo_Producto">				
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Precio">					
+				</td>
+			</form>
+			</tr>
+
+			<tr>
+			<form action='/Admin' method="POST">
+				<td>
+				<label for= "Restringido"> Restringido </label>					
+				</td>
+				<td>
+				<input type="text" name="Restringido">					
+				</td>
+				<td>
+				<label for= "Codigo_Producto">Codigo Producto</label>					
+				</td>
+				<td>
+				<input type="text" name="Codigo_Producto">					
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Estado">					
+				</td>
+			</form>
+			</tr>
+
+			<tr>
+			<form action='/Admin' method="POST">
+				<td>
+				<label for= "Stock"> Agregar Stock </label>					
+				</td>
+				<td>
+				<input type="text" name="Stock">					
+				</td>
+				<td>
+				<label for= "Codigo_Producto">Codigo Producto</label>					
+				</td>
+				<td>
+				<input type="text" name="Codigo_Producto">					
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Agregar Stock">					
+				</td>
+			</form>
+			</tr>
+
+			<tr>
+			<form action='/Admin' method="POST">
+				<td>
+				<label for= "Stock"> Eliminar Stock </label>					
+				</td>
+				<td>
+				<input type="text" name="Stock">					
+				</td>
+				<td>
+				<label for= "Codigo_Producto">Codigo Producto</label>					
+				</td>
+				<td>
+				<input type="text" name="Codigo_Producto">				
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Eliminar Stock">					
+				</td>
+			</form>
+			</tr>
+		</table>
+		{% endif %}
+	</div>	
+	<div>
+
+		{%if mensaje2 == "Actualizar Cliente"%}
+		<br>
+		<table>	
+
+			<tr>			
+			<form action='/Admin' method="POST">
+
+				<td>
+				<label for = "Rut_Cliente"> Ingresar Rut del Cliente </label>
+				</td>
+				<td>
+				<input type="text" name="Rut_Cliente">					
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Cambiar a Administrador">					
+				</td>
+			</form>			
+			</tr>
+
+		</table>		
+		{%endif%}
+	</div>
+
+	<div>
+		{% if mensaje2 == "Ingresar Categoria" %}
+		<h2> Ingresar Categoria </h2>
+		<br>
+		<table>
+		<form action= '/Admin' method= 'POST'>
+			<tr>
+			<td>
+			<label for= "NombreCategoria"> Nombre Categoria </label>					
+			</td>
+			<td>
+			<input type="text" name="NombreCategoria">				
+			</td>
+			<td>
+			<input type="submit" name="Ingresar" value="Ingresar Categoria">				
+			</td>
+			</tr>
+		</form>				
+		</table>
+		{% endif %}	
+	</div>
+
+	<div>
+		{% if mensaje2 == "Actualizar Categoria" %}
+		<h2> Actualizar Categoria </h2>
+		<br>
+		<table>
+		<form action= '/Admin' method= "POST">
+			<tr>
+			<td>
+			<label for= "Actualizar_Categoria"> Actualizar Nombre Categoria </label>				
+			</td>
+			<td>
+			<input type="text" name="Actualizar_Categoria">				
+			</td>
+			<td>
+			<label for="Codigo_Categoria"> Ingrese Codigo Categoria </label>				
+			</td>
+			<td>
+			<input type="text" name="Codigo_Categoria">				
+			</td>
+			<td>
+			<input type="submit" name="Ingresar" value="Actualizar Nombre de Categoria">				
+			</td>
+			</tr>
+		</form>			
+		</table>
+		{% endif %}	
+	</div>
+
+	<div>
+		{% if mensaje2 == "Ingresar Repartidor" %}
+		<h2> Ingresar Repartidor </h2>
+		<br>
+		<table>
+		<form action= '/Admin' method= 'POST'>
+			<tr>
+			<td>
+			<label for= "Rut_Repartidor"> Rut Repartidor </label>				
+			</td>
+			<td>
+			<input type="text" name="Rut_Repartidor">				
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label for= "Nombre_Repartidor"> Nombre Repartidor </label>				
+			</td>
+			<td>
+			<input type="text" name="Nombre_Repartidor">				
+			</td>
+			</tr>
+			<tr>	
+			</tr>
+			<td>
+			<label for= "Apellido_Repartidor"> Apellido Repartidor </label>				
+			</td>
+			<td>
+			<input type="text" name="Apellido_Repartidor">				
+			</td>
+			<td>
+			<input type="submit" name="Ingresar" value="Ingresar Repartidor">						
+			</td>
+			</tr>
+
+		</form>			
+		</table>
+
+		{% endif %}
+	</div>
+
+	<div>
+		{% if mensaje2 == "Actualizar Repartidor" %}
+		<h2> Actualizar Repartidor </h2>
+		<table>
+		<form action= '/Admin' method= "POST">
+			<tr>
+			<td>
+			<label for= "Nombre_Repartidor"> Actualizar Nombre Repartidor </label>					
+			</td>
+			<td>
+			<input type="text" name="Nombre_Repartidor">				
+			</td>
+			<td>
+			<label for= "Rut_Repartidor"> Rut Repartidor </label>				
+			</td>
+			<td>
+			<input type="text" name="Rut_Repartidor">				
+			</td>
+			<td>
+			<input type="submit" name="Ingresar" value="Actualizar Nombre_Repartidor">					
+			</td>
+			</tr>
+		</form>
+
+		<form action= '/Admin' method= "POST">
+			<tr>
+			<td>
+			<label for= "Apellido_Repartidor"> Actualizar Apellido Repartidor </label>				
+			</td>
+			<td>
+			<input type="text" name="Apellido_Repartidor">				
+			</td>
+			<td>
+			<label for= "Rut_Repartidor"> Rut Repartidor </label>				
+			</td>
+			<td>
+			<input type="text" name="Rut_Repartidor">				
+			</td>
+			<td>
+			<input type="submit" name="Ingresar" value="Actualizar Apellido_Repartidor">				
+			</td>
+			</tr>
+		</form>			
+		</table>	
+		{% endif %}
+	</div>
+<br><br><br><br><br><br>
+
+</body>
+</html>

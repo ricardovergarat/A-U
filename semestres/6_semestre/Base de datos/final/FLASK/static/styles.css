@@ -1,0 +1,61 @@
+*{
+	font-family: monospace;
+	background: beige;
+}
+
+h1{
+	font-family: sans-serif;
+	color: black;
+	font-size: 32px;
+}
+
+h2{
+	font-size: 24px;
+}
+
+h3{
+	font-size: 20px;
+}
+
+h4{
+	font-size: 16px;
+}
+
+button, input{
+	font-size: 14px;
+}
+
+label{
+	font-size: 14px;
+}
+
+textarea{
+	font-size: 14px;
+	background: white;
+}
+.mensaje {
+	font-size: 24px;
+	color: rgb(0,0,225);
+}
+
+
+.titulo{
+	text-align: center;
+}
+
+.Categoria{
+	position: sticky;
+	top: 0;
+	right: 25;
+}
+
+.GifGatico{
+	position: absolute;
+	right: 60px;
+	top: 40px;
+}
+
+.tablecenter{
+	margin: 0 auto;
+	width: 300px;
+}

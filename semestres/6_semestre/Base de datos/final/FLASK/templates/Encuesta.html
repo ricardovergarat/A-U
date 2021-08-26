@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encuesta</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+</head>
+<body>
+	<div><h1>Encuesta de satisfaccion</h1></div>
+	<div> <h3> Muchas gracias por comprar con nosotros! Al enviar sera regresado al inicio </h3> </div>	
+<div>
+
+	<table>	
+		<form action="/Encuesta" method ="POST">
+		<tr>
+			<td><label for="Pregunta1"> ¿Que le parecio la pagina?</label></td>
+			<td> <textarea name="Pregunta1" cols="70" rows="10">  </textarea> </td>
+		</tr>
+
+		<tr>
+			<td> <label> ¿Que mejoras le haria a la pagina?</label> </td>
+			<td> <textarea name="Pregunta2" cols="70" rows="10">  </textarea> </td>
+		</tr>
+
+		<tr>
+			<td> <label> ¿Que agregaria a la pagina?</label> </td>
+			<td> <textarea name="Pregunta3" cols="70" rows="10">  </textarea> </td>
+		</tr>
+
+		<tr>
+			<td> <label> ¿Que quitaria de la pagina?</label> </td>
+			<td> <textarea name="Pregunta4" cols="70" rows="10">  </textarea> </td>
+		</tr>
+
+		<tr>
+			<td> <label> ¿Esta satisfecho con los tiempos de espera?</label> </td>
+			<td> <textarea name="Pregunta5" cols="70" rows="10">  </textarea> </td>	
+		</tr>
+
+		<tr>
+			<td> <input type="submit" name=""> </td>
+		</tr>
+	</form>
+	</table>
+	
+
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datos de Pago</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+</head>
+<body>
+	<h1> Realice su Pago </h1>
+	{%if mensaje != NULL%}
+		{{mensaje}}
+	{%endif%}
+	{%if mensaje == "COMPRA INGRESADA"%}
+		<h2 class="mensaje">{{mensaje}} presione el boton para ver la boleta </h2> <button type="submit" onclick="location='/Boleta'" >Ir a Boleta</button>
+	{%endif%}
+	<table>
+		<tr>
+			<th>
+				<form action="/credito" method="POST">
+					<input type="submit" name="Tipo_Pago" value="Debito">
+				</form>
+			</th>
+			<th>
+				<form action="/credito" method ="POST">
+					<input type="submit" name="Tipo_Pago" value="Credito">
+				</form>
+			</th>
+		</tr>
+	</table>
+	{% if mensaje2 == "Credito" %}
+	<h2> Ingrese sus datos </h2>
+		<form action="/credito" method = "POST">
+		<table>
+			<tr>
+			<td>
+			<label for= "Numero_Tarjeta"> Numero de Tarjeta </label>					
+			</td>
+			<td>
+			<input type="text" name="Numero_Tarjeta">					
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label for= "Fecha_Expiracion"> Fecha de expiracion </label>				
+			</td>
+			<td>
+			<input type="text" name="Fecha_Expiracion">					
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label for= "CVV"> CVV </label>				
+			</td>
+			<td>
+			<input type="text" name="CVV">
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<input type="submit" name="Pago_Credito" value="Comprar">					
+			</td>
+			</tr>
+		</table>
+		</form>
+	{% endif %}
+
+	{% if mensaje2 == "Debito" %}
+	<h2> Ingrese sus datos </h2>
+		<form action="/credito" method = "POST">
+		<table>
+			<tr>
+			<label for= "Rut_Tarjeta"> Ingrese su Rut </label>				
+			</tr>
+			<tr>
+			<input type="text" name="Rut_Tarjeta">				
+			</tr>
+			<tr>
+			<input type="submit" name="Pago_Debito" value="Comprar">					
+			</tr>
+		</table>
+		</form>
+	{%endif%}
+	<br><br><br><br><br><br>
+</body>
+</html>

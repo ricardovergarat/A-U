@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Mis Datos </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+</head>
+<body>
+	<h1> Mis Datos </h1>
+
+		<div class="GifGatico">
+			<img src="{{url_for('static',filename='imagenes/GifGatico.gif')}}" align="right" width="400">
+		</div>
+
+	<table> 
+	{% for i in Datos%}		
+		<tr>
+			<td> <h4> Rut </h4></td>
+			<td> <h4> {{i[0]}} </h4> </td>
+		</tr>
+		<tr>
+			<td> <h4> Nombre Apellido </h4> </td>
+			<td> <h4> {{i[1]}} {{i[2]}} </h4> </td>
+		</tr>
+		<tr>
+			<td> <h4> Fecha de Naciemiento </h4> </td>
+			<td> <h4> {{i[3]}} </h4> </td>
+		</tr>
+		<tr>
+			<td> <h4> Telefono </h4> </td>
+			<td> <h4> {{i[4]}} </h4> </td>
+		</tr>
+		<tr>
+			<td> <h4> Dirección </h4> </td>
+			<td> <h4> 
+				{{i[5]}} {{i[6]}} {{i[7]}}
+				{% if i[8] != None %}
+					{{i[8]}} {{i[9]}}
+				{% endif %}
+			</h4> </td>
+		</tr>
+		<tr>
+			<td> <h4> E-mail </h4> </td>
+			<td> <h4> {{i[10]}} </h4> </td>
+		</tr>
+	{% endfor %}		
+	</table>
+
+	<button type="submit" onclick="location='/'">Volver al Inicio</button>
+
+</body>
+</html>

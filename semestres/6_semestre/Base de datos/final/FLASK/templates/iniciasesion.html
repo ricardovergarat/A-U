@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title> Iniciar Sesion</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+</head>
+
+<body>
+	{%if mensaje != ""%}
+		<h2 class="mensaje">{{mensaje}} </h2>
+	{%endif%}
+	<h1> Bienvenido</h1>
+	<h2> Ingrese su Rut </h2>
+	<h2> Si inicia sesion correctamente volvera al inicio </h2>
+
+	<form action = "{{url_for('iniciasesion')}}" method = "POST" >
+		<label for= "Rut_C"> Rut </label>
+		<input type="text" name="Rut_C">
+
+		<label for= "Contraseña_C"> Contraseña </label>
+		<input type="password" name="Contraseña_C">
+
+		<input type = "submit" name = "" value = "Iniciar Sesion">		
+	</form>
+	<br><br>
+	<button type="submit" onclick="location='/'">Volver al Inicio</button>
+	<button type="submit" onclick="location='/registro'">Registrarse</button>
+	<br><br>
+	<img src="{{url_for('static',filename='imagenes/Pu3.gif')}}">
+<br><br><br><br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Actualizar</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+</head>
+<body>
+	<h1>Actualizar Datos</h1>
+	<br><br>
+	{%if mensaje != ""%}
+		<h2 class="mensaje"> {{mensaje}} </h2>
+	{%endif%}
+	<table>
+		<tr>
+			<form action='/ActualizarDatos' method="POST">
+				<td>
+				<label for= "Correo"> Ingresar nuevo Correo </label> <br><br>
+				</td>
+				<td>
+				<input type="text" name="Correo"> <br><br>
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Correo"> <br><br>
+				</td>
+			</form>
+			</tr>
+
+			<form action='/ActualizarDatos' method = "POST">
+				<tr>
+				<td>
+				<label for = "Comuna"> Ingrese la nueva Comuna </label><br><br>
+				</td>
+				<td>
+				<input type="text" name="Comuna"><br><br>
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Comuna"><br><br>
+				</td>				
+				</tr>
+			</form>
+
+			<form action='/ActualizarDatos' method = "POST">
+				<tr>
+				<td>
+				<label for = "Numero_Casa"> Ingrese el nuevo Numero de Casa</label><br><br>
+				</td>
+				<td>
+				<input type="text" name="Numero_Casa"><br><br>
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Numero Casa"><br><br>
+				</td>
+				</tr>
+			</form>
+
+			<form action='/ActualizarDatos' method = "POST">
+				<tr>
+				<td>
+				<label for = "Calle"> Ingrese la nueva calle</label><br><br>
+				</td>
+				<td>
+				<input type="text" name="Calle"><br><br>
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Calle"><br><br>
+				</td>
+				</tr>
+			</form>
+
+			<form action='/ActualizarDatos' method = "POST">
+				<tr>
+				<td>
+				<label for= "Numero_Departamento"> Ingresar el nuevo Numero de Departamento</label><br><br>
+				</td>
+				<td>
+				<input type="text" name="Numero_Departamento"><br><br>
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value= "Actualizar Numero Departamento"><br><br>
+				</td>
+				</tr>
+			</form>
+
+			<form action='/ActualizarDatos' method = "POST">
+				<tr>
+				<td>
+				<label for = "Bloque_Departamento"> Ingrese el nuevo Bloque del Departamento</label><br><br>
+				</td>
+				<td>
+				<input type="text" name="Bloque_Departamento"><br><br>					
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Actualizar Bloque Departamento"><br><br>					
+				</td>
+				</tr>
+			</form>
+
+			<tr>
+			<form action='/ActualizarDatos' method="POST">
+				<td>
+				<label for = "Contraseña"> Ingresar Nueva Contraseña</label><br><br>
+				</td>
+				<td>
+				<input type="password" name="Contraseña"><br><br>
+				</td>
+				<td>
+				<label for = "Contraseña"> Confirmar Nueva Contraseña</label><br><br>
+				</td>
+				<td>
+				<input type="password" name="Confirmar_Contraseña"><br><br>
+				</td>
+				<td>
+				<input type="submit" name="Ingresar" value="Cambiar Contraseña"><br><br>
+				</td>
+			</form>
+			</tr>
+	</table>
+	<br><br>
+	<button type="submit" onclick="location='/'">Volver al Inicio</button>
+</body>
+</html>

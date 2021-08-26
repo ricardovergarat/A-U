@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Registro Cliente </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+</head>
+
+<body>
+	<h2 class="mensaje">{{mensaje}}</h2>
+	{%if mensaje == "CLIENTE INGRESADO"%}
+		<h2>¿Desea volver al inicio? </h2>
+			<button type="submit" onclick="location='/'">Volver al Inicio</button>
+	{%endif%}
+
+	<header>
+		<h1>
+			Ingrese sus datos
+		</h1>
+	</header>
+
+	<form action="{{url_for('registro')}} "method="POST">
+		
+		<h2> Rut </h2>
+		<label for= "Rut_C">Ingrese su Rut </label>
+		<input type= "text" name= "Rut_C" maxlength="9" placeholder= "Ej: 2030676" required> 
+
+		<br><br>
+		<h2> Contraseña </h2>
+		<label for= "Contrasena"> Ingrese su Contraseña </label>
+		<input type="password" name="Contrasena" placeholder= "min 8 caracteres" required>
+
+		<br><br>
+
+		<h2> Nombre Completo </h2>
+		<label for= "Nombre_C"> Ingrese su Nombre </label>
+		<input type="text" name="Nombre_C" required>		
+		<label for= "Apellido_C"> Ingrese su Apellido </label>
+		<input type="text" name="Apellido_C" required>
+
+		<br><br>
+
+		<h2> Fecha de Naciemiento </h2>
+		<label for= "FechaNac_C"> Introduzca su Fecha de nacimiento </label>
+		<input type="text" name="FechaNac_C" placeholder= "dd-mm-yyyy" required>
+
+		<br><br>
+
+		<h2> Telefono </h2>
+		<label for= "Telefono1_C"> Telefono 1 </label>
+		<input type="text" name="Telefono1_C" required>
+
+		<br><br>
+
+		<h2> Direccion </h2>
+		<label for= "Comuna_C"> Comuna </label>
+		<input type="text" name="Comuna_C" required>
+		<label for= "Calle_C"> Calle </label>
+		<input type="text" name="Calle_C" placeholder= "Ej: Cuatro Sur" required>
+		<label for= "Num_Casa_C"> Numero Casa </label>
+		<input type="text" name="Num_Casa_C" required>
+		<br><br>
+		<label for= "Num_Depa_C"> Numero Departamento* </label>
+		<input type="text" name="Num_Depa_C">
+		<label for= "Bloque_Depa_C"> Bloque Departamento* </label>
+		<input type="text" name="Bloque_Depa_C">
+		<br>
+		<label> * Son opcionales </label>
+
+		<br><br>
+
+		<h2> E-Mail</h2>
+		<label for= "Email_C"> E-Mail </label>
+		<input type="text" name="Email_C" required>
+
+		<br><br><br>
+		<input type="submit" name="" value="Registrarse">
+		{%if current_user.is_authenticated%}
+			{%if current_user.rut in Admins%}
+				<input type="submit" name="Ingresar_Admin" value="Ingresar Administrador">
+			{%endif%}
+		{%endif%}
+		<button type="submit" onclick="location='/'">Volver al Inicio</button>
+	</form>
+	<br><br><br><br><br><br>
+</body>
+

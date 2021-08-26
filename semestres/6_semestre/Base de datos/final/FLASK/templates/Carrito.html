@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Carrito </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+</head>
+<body>
+	<h2 class="mensaje">{{mensaje}} </h2>
+	<h1> Bienvenido al carrito </h1>
+	<img src="{{url_for('static',filename='imagenes/Gato2.gif')}}">
+	
+	<br><br>
+
+	<div>
+		<table>
+			<tr>
+				<td>
+					<button type="submit" onclick="location='/'"> Volver al inicio</button>
+				</td>
+				<td>
+					<form action="/Carrito" method ="POST">
+						<input type="submit" name="Opcion" value="Pagar">
+					</form>
+				</td>
+			</tr>
+
+		</table>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td> <h3> Total del Carrito {{TotalC[0][0]}} </h3> </td>
+			</tr>			
+		</table>
+	</div>
+
+	<section>
+			{% for i in carrito%}
+				<table border = "1" style="width: 60%">
+
+					<colgroup>
+						<col style="width: 50%"/>
+						<col style="width: 20%"/>
+						<col style="width: 10%"/>
+						<col style="width: 30%"/>
+					</colgroup>
+					<tr>
+						<th align ="left"> Nombre </th>
+						<th align ="left"> Codigo </th>
+						<th align ="left"> Cantidad </th>
+						<th align ="left"> Total </th>
+						<th align ="left"> Cantidad Nueva</th>
+
+					</tr>
+					<tr>
+						<form action ="/Carrito" method = "POST">
+							<td align ="left"> {{i[3]}} </td> 
+							<td align ="left"> {{i[0]}} </td>
+							<td align ="left"> {{i[1]}} </td>
+							<td align ="left"> {{i[2]}} </td>
+							<td align ="left"><input type="number" name="Cantidad_Nueva" min="1" value="0"></td>
+							<td align = "left"><input type="submit" name="Opcion {{i[3]}}" value= "Actualizar Cantidad" ></td>
+						</form>
+						<form action = "/Carrito" method = "POST">
+							<td><input type="submit" name="Quitar {{i[3]}}" value="Eliminar Producto"></td>
+						</form>
+						
+
+					</tr>
+				</table>
+
+			{% endfor %}
+	</section>	
+<br><br><br><br><br><br>
+</body>
+
+</html>

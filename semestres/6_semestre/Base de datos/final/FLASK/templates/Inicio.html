@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title> MARKAT </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='/imagenes/mifavicon.png')}}">
+
+
+</head>
+
+
+<body>
+	<!--Gaticos-->
+
+	<div>
+		<img src="{{url_for('static',filename='imagenes/Inicio.png')}}" align="center">
+	</div>
+
+	<header>
+		<h1 class="titulo">BIENVENIDO A MARKAT </h1>
+		<br>
+	</header>
+	{%if mensaje != ""%}
+		<h2 class="mensaje"> {{mensaje}} </h2>
+	{%endif%}
+
+	{% if current_user.is_authenticated %}		
+		<table> 
+			<tr>
+				<th>
+					<h2> 
+						&nbsp;&nbsp;
+						Bienvenido {{current_user.nombre.NOMBRE}} 
+						<br> 
+					</h2>	
+				</th>
+				<th>
+					&nbsp;&nbsp;
+					<button> <a href="{{url_for('cerrarsesion')}}"> Cerrar Sesion </a> </button> 					
+				</th>
+				<th>
+					<button name="Carrito" type="submit" onclick= "location='/Carrito'"> Carrito </button>	
+				</th>
+				<th>
+					<button name="VerDatos" type="submit" onclick="location='/MisDatos'"> Ver Datos </button>  
+				</th>
+				<th>
+					{% if current_user.rut in Admins %}
+						<button name="Admin" type= "submit" onclick= "location= '/Admin'"> Administrar Pagina </button>
+						<button name= "Ingresar_Admin" type= "submit" onclick= "location= '/registro'"> Ingresar Administrador </button>
+						<button name="Cliente" type = "submit" onclick="location='/ActualizarDatos'"> Actualizar Datos</button>
+					{%else%}
+						<button name="Cliente" type = "submit" onclick="location='/ActualizarDatos'"> Actualizar Datos</button>
+					{% endif %}
+				</th>
+			</tr>
+		</table>
+
+
+	{% else %}
+
+		<table>
+			<tr>
+				<th>
+					<button> <a href="{{url_for('iniciasesion')}}"> Inicia Sesion </a> </button>					
+				</th>
+				<th>
+					<button name="Registrarse" type="submit" onclick= "location='/registro'">
+					Registrarse
+					</button>						
+				</th>
+			</tr>
+		</table>
+		<h4> Inicie sesión para realizar una compra </h4>	
+	{% endif %}
+
+	<div class="Categoria">
+		<table>
+			<tr>
+				<th> <img src="{{url_for('static',filename='imagenes/Inicio.png')}}" width="120"> </th>
+				<th> <h3> CATEGORIAS &nbsp;&nbsp; </h3> </th>
+				{%for i in mostrar_Categorias%}
+					<th>
+					<form action="{{url_for('Inicio')}}" method="POST">
+						<label for="Categoria"> </label>
+						<input type="submit" name="Categoria" value={{i[0]}}>
+					</form>
+					</th>
+				{%endfor%}
+				<th>
+					<form action="{{url_for('Inicio')}}" method="POST">
+						<label for="Ver Todo"> </label>
+						<input type="submit" name="Categoria" value="Ver Todo">
+					</form>
+				</th>
+			</tr>
+		</table>
+	</div>
+
+	<br>
+
+	<div>
+		<h3> PRODUCTOS </h3>
+	</div>
+
+	<section>
+		
+	</section>
+		{% if current_user.is_authenticated %}
+				<table border = "1" style="width: 75%">
+					<colgroup>
+						<col style="width: 25%"/>
+						<col style="width: 10%"/>
+						<col style="width: 10%"/>
+						<col style="width: 10%"/>
+						<col style="width: 45%" />
+					</colgroup>
+					<tr>
+						<th align ="left"> <h4> Nombre </h4> </th>
+						<th align ="left"> <h4> Precio </h4> </th>
+						<th align ="left"> <h4> Stock </h4> </th>
+						<th align ="left"> <h4> Codigo Producto </h4></th>
+						{% if current_user.is_authenticated %}
+						<th align ="left"> <h4> Cantidad </h4></th>
+						{%endif%}
+					</tr>
+					{% for i in fila%}
+						<tr>
+							<td align ="left"> <h4> {{i[0]}} </h4> </td>
+							<td align ="left"> <h4> {{i[1]}} </h4> </td>
+							<td align ="left"> <h4> {{i[2]}} </h4> </td>
+							<td align ="left"> <h4> {{i[3]}} </h4> </td>
+							{% if current_user.is_authenticated %}
+								<h4><td align ="left"> 
+									<form action="{{url_for('Inicio')}}" method="POST">
+										<label for="Agregar al Carrito"> </label>
+										<input type="number" name="Cantidad" value="0" min="1" max="{{(i[2])}}" required> 
+										<input type="submit" name="Agregar al Carrito" value="Agregar al carrito {{i[0]}}">
+									</form>
+								</td></h4>
+							{%endif%}
+						</tr>
+					{% endfor %}
+				</table>
+		{% else %}
+			<section>
+				<table border = "1" style="width: 60%">
+					<colgroup>
+						<col style="width: 25%"/>
+						<col style="width: 10%"/>
+						<col style="width: 10%"/>
+						<col style="width: 10%"/>
+						<col style="width: 45%" />
+					</colgroup>
+						<tr>
+							<th align ="left"> <h4> Nombre </h4> </th>
+							<th align ="left"> <h4> Precio </h4> </th>
+							<th align ="left"> <h4> Stock </h4> </th>
+							<th align ="left"> <h4> Codigo Producto </h4></th>
+						</tr>
+						{% for i in fila%}
+						<tr>
+
+							<td align ="left"> <h4> {{i[0]}} </h4> </td> <!--nombre-->
+							<td align ="left"> <h4> {{i[1]}} </h4> </td> <!--precio-->
+							<td align ="left"> <h4> {{i[2]}} </h4> </td> <!--Stock-->
+							<td align ="left"> <h4> {{i[3]}} </h4> </td> <!--CodProducto-->
+						</tr>
+						{% endfor %}
+						</tr>
+				</table>
+			</section>
+		{% endif %}
+<br><br><br><br><br><br>
+</body>
